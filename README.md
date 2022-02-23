@@ -21,9 +21,8 @@ vagrant up --provision
         http://localhost:8080
 
 
-## Folder structure 
-
-
+## Folder structure
+```
 ├── README.md
 ├── Vagrantfile
 └── ansible-provisioner
@@ -33,3 +32,4 @@ vagrant up --provision
             └── tasks
                 └── main.yaml
 
+```
