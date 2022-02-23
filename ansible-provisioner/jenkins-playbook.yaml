@@ -1,0 +1,9 @@
+---
+- name: Jenkins install
+  hosts: all
+  become: yes
+  # tasks:
+  #   - name: ping
+  #     ping:
+  roles:
+     - install-jenkins

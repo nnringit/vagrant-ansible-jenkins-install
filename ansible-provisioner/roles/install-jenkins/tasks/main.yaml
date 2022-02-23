@@ -1,0 +1,33 @@
+- name: Install jdk
+  apt: 
+    name: default-jre
+    state: present
+    update_cache: yes
+- name: check java version
+  shell:  
+    java -version
+- name: get apt_key
+  apt_key:
+    url: "https://pkg.jenkins.io/debian-stable/jenkins.io.key"
+    state: present
+- name: debian pkg repo
+  apt_repository:
+    repo: deb http://pkg.jenkins.io/debian-stable binary/
+    state: present
+- name: Update all packages to their latest version
+  apt:
+    name: "*"
+    state: latest
+- name: Install jenkins
+  apt: 
+    name: jenkins
+    state: present
+
+- name: Start service jenkins, if not started
+  service:
+    name: jenkins
+    state: started
+
+# - name: check files 
+#   shell: |
+#     sudo cat /var/lib/jenkins/secrets/initialAdminPassword
