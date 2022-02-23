@@ -1,6 +1,6 @@
 # Install Jenkins CI server using Vagrant and ansible on a remote/guest VM
 
-This is to install Jenkins CI server on a ubuntu VM  which gets created using Vagrant and will be provsioned by ansible CM tool which is get installed and configured automatically by the ansible_local vagrant's provisioner
+This is to install Jenkins CI server on a ubuntu VM  which gets created using Vagrant and will be provisioned by ansible CM tool which is get installed and configured automatically by the ansible_local vagrant's provisioner
 
 ## Pre-Reqs
 1. Install Vagrant
@@ -22,7 +22,7 @@ vagrant up --provision
 
 
 ## Folder structure 
-.
+
 ├── README.md
 ├── Vagrantfile
 └── ansible-provisioner
